@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zrouter"
+version = "0.3.10"
+authors = [
+  { name="inspirare6", email="inspirare6@163.com" },
+]
+description = "zen router library"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  "flask==2.2.2",
+  "inspirare",
+  "jsonschema"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/inspirare6/zrouter"
+"Bug Tracker" = "https://github.com/inspirare6/zrouter/issues"
