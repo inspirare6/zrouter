@@ -2,7 +2,6 @@ from zrouter.exceptions import MessagePrompt
 from zrouter.utils.json import to_lowcase, iter_lowcase, iter_camel
 from flask import Blueprint, request
 from jsonschema.exceptions import ValidationError
-from abc import ABC, abstractmethod
 from functools import wraps
 import random
 
@@ -36,12 +35,12 @@ class Router(ABC, ParamMixin, Blueprint):
     def __init__(self, *args, **kwargs):
         Blueprint.__init__(self, *args, **kwargs)
 
-    @abstractmethod
     def verify_user(self):
+        """用户验证，通过继承覆盖此方法实现具体逻辑"""
         return True
 
-    @abstractmethod
     def handle_error(self, e):
+        """错误处理，通过继承覆盖此方法实现具体逻辑"""
         pass
 
     def wrap_func(self, func, direct=False, open=False):
