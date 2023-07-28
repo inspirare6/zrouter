@@ -1,11 +1,15 @@
 # zrouter
+基于Flask的路由工具库，集成登录验证、权限控制、日志记录、RESTful API快速构建等功能。
 
-Zen Router library. 
 
+## 安装
+```shell
+pip install zrouter
+```
 
-基本用法：
+## 基本使用
 ```python
-# 定义路由
+# 定义路由器
 router = Router('body', __name__, url_prefix='/body')
 
 
@@ -34,7 +38,7 @@ router.add_resources({
 })
 ```
 
-
+## 自定义
 通过继承实现用户验证方法、错误处理方法。
 ```python
 from zrouter import Router as Router_
