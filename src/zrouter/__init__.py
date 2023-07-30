@@ -10,4 +10,3 @@ def get_ip():
     nodes = request.headers.getlist("X-Forwarded-For")
     return nodes[0] if nodes else request.remote_addr
 
-
